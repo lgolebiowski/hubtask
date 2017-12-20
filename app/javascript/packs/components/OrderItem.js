@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class OrderItem extends Component {
     
     state = {
-        status: this.props.status_id, 
+        status: this.props.id, 
       }
 
     toggleHandler = (event) => {
@@ -21,7 +21,7 @@ class OrderItem extends Component {
       var link = document.createElement("a");
       link.download = name;
       link.href = uri;
-      link.onClick();
+      link.click();
     }
 
     render() {
@@ -43,13 +43,13 @@ class OrderItem extends Component {
           <li>x</li>
           <li>{this.props.title}</li>
           <li>
-            {this.props.uri ? 
+            {this.props.url ? 
             <button
               style = {buttonStyle}
               className="Button"
               onClick={(event) => {
                 event.preventDefault();
-                this.handleDownload(this.props.uri, 'Artboard.jpg');
+                this.handleDownload(this.props.url, 'Artboard.jpg');
               }}
                 >
               Download Artwork

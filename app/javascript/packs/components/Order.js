@@ -16,11 +16,8 @@ class Order extends Component {
       return <OrderItem 
         key= {order.id}
         title = {order.title} 
-        address = {order.shipping_address} 
-        total = {order.total} 
-        id={order.id} 
-        status_id={order.status_id} 
-        uri={order.uri}
+        url = {order.url} 
+        total = {order.thumbnailUrl} 
         />;
     });
 
